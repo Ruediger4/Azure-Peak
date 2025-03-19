@@ -41,7 +41,7 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/skin_armor/monk_skin
 	cloak = /obj/item/clothing/cloak/psydontabard/alt
 	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
@@ -50,13 +50,12 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 		H.change_stat("strength", 3)
-		H.change_stat("endurance", 4)
-		H.change_stat("constitution", 4)
-		H.change_stat("intelligence", -2)
+		H.change_stat("endurance", 2)
+		H.change_stat("constitution", 2)
+		H.change_stat("intelligence", -1)
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_INQUISITION, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_CRITICAL_RESISTANCE, TRAIT_GENERIC)
-		ADD_TRAIT(H, TRAIT_NOPAINSTUN, TRAIT_GENERIC)
 
 /datum/outfit/job/roguetown/disciple/proc/naledi_equip(mob/living/carbon/human/H)
 	backpack_contents = list(/obj/item/roguekey/inquisition = 1)
@@ -74,10 +73,9 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 		H.mind.adjust_spellpoints(-6)
-		H.change_stat("strength", 3)
+		H.change_stat("strength", 2)
 		H.change_stat("speed", 2)
 		H.change_stat("endurance", 2)
-		H.change_stat("constitution", 1)
 		H.change_stat("perception", -1)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/fetch) // Pre-set spell list
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/sickness)
