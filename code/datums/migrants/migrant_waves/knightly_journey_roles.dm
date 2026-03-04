@@ -55,7 +55,8 @@
 		/datum/skill/misc/climbing= SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/reading= SKILL_LEVEL_JOURNEYMAN,
 	)
-	horse = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/saigabuck/tame/saddled
+	subclass_virtues = list(
+		/datum/virtue/utility/riding
 
 /datum/outfit/job/roguetown/adventurer/knighte_expert/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -64,12 +65,17 @@
 		"Guard Helmet"		= /obj/item/clothing/head/roguetown/helmet/heavy/guard,
 		"Barred Helmet"		= /obj/item/clothing/head/roguetown/helmet/heavy/sheriff,
 		"Bucket Helmet"		= /obj/item/clothing/head/roguetown/helmet/heavy/bucket,
-		"Knight Helmet"		= /obj/item/clothing/head/roguetown/helmet/heavy/knight,
+		"Sugarloaf Helmet"  = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/crusader,
+		"Knight's Armet"		= /obj/item/clothing/head/roguetown/helmet/heavy/knight,
+		"Knight's Helmet"		= /obj/item/clothing/head/roguetown/helmet/heavy/knight/old,
+		"Knight's Greatplumed Armet"		= /obj/item/clothing/head/roguetown/helmet/heavy/knight/greatplume,
 		"Visored Sallet"			= /obj/item/clothing/head/roguetown/helmet/sallet/visored,
 		"Armet"				= /obj/item/clothing/head/roguetown/helmet/heavy/knight/armet,
 		"Hounskull Bascinet" 		= /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/hounskull,
 		"Etruscan Bascinet" 		= /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan,
 		"Slitted Kettle"		= /obj/item/clothing/head/roguetown/helmet/heavy/knight/skettle,
+		"Visored Barbute" = /obj/item/clothing/head/roguetown/helmet/heavy/barbute/visor,
+		"Great Barbute" = /obj/item/clothing/head/roguetown/helmet/heavy/barbute/great,
 		"None"
 		)
 	var/helmchoice = input(H, "Choose your Helm.", "TAKE UP HELMS") as anything in helmets
@@ -148,12 +154,13 @@
 	traits_applied = list(TRAIT_SQUIRE_REPAIR, TRAIT_MEDIUMARMOR)
 	category_tags = list(CTAG_KG_SQUIRE)
 	horse = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/saigabuck/tame/saddled	
-	subclass_stats = list(
+	subclass_stats = list(			//8 points so they can still play ball a bit
 		STATKEY_STR = 1,
 		STATKEY_PER = 1,
 		STATKEY_CON = 1,
 		STATKEY_INT = 1,
 		STATKEY_WIL = 1,
+		STATKEY_SPD = 1,
 	)
 	subclass_skills = list(
 		/datum/skill/combat/polearms = SKILL_LEVEL_JOURNEYMAN,
@@ -162,7 +169,7 @@
 		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/combat/shields = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/combat/whipsflails = SKILL_LEVEL_APPRENTICE,
-		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
